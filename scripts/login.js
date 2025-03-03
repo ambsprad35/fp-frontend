@@ -36,7 +36,8 @@ async function login(username, password){
         localStorage.setItem("auth", auth)
         localStorage.setItem("role", role)
         //redirect
-        window.location.replace("/index.html")
+        //window.location.replace("/index.html")
+        window.location.replace("/fp-frontend/index.html")
     }
     else{
         document.querySelector("#errorMsg").innerHTML = "Bad username and password"
