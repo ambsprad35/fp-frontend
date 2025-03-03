@@ -14,7 +14,6 @@ addEventListener("DOMContentLoaded", async function(){
         document.querySelector("#description").value = course.courseDesc
     }
 
-    
 })
 
 async function updateCourse(){
