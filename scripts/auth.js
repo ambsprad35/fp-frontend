@@ -11,7 +11,8 @@ class Auth{
     async validateAuth(auth, role){
         console.log(role, auth)
         if((auth != 1) || (role === "Student")){
-            window.location.replace("/login.html")
+            //window.location.replace("/login.html")
+            window.location.replace("/fp-frontend/login.html")
             console.log("redirected to login") 
         }
         else{
@@ -26,6 +27,7 @@ class Auth{
         localStorage.removeItem("token")
         localStorage.removeItem("uname")
 
-        window.location.replace("/login.html")
+        //window.location.replace("/login.html")
+        window.location.replace("/fp-frontend/login.html")
     }
 }
