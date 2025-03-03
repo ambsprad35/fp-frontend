@@ -27,6 +27,6 @@ async function addCourse(){
         document.querySelector("form").reset()
     }
     else{
-        document.querySelector("#error").innerHtml = "Cannot Add Song"
+        document.querySelector("#error").innerHtml = "Cannot Add Course"
     }
 }
