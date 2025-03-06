@@ -25,7 +25,10 @@ async function getEnrolledCourses(){
         let user = await response.json()
         let html = ""
         for(i=0; i<user.cart.length; i++){
-            html+= `<li>${user.cart[i]}</li></br>`
+            const res = await fetch ("http://localhost:3000/api/courses/" + user.cart[i])
+            const course = await res.json()
+            console.log(course)
+            html+= `<li>Course - ${course.name}-Credit hours: ${course.credits}</l1></br>`//`<li>${user.cart[i]}</li></br>`
         }
         document.querySelector("#addedCourses").innerHTML = html
     }
