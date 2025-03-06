@@ -6,12 +6,14 @@ addEventListener("DOMContentLoaded", function(){
 async function addCourse(){
     const course = {
         name: document.querySelector("#name").value,
-        subjectArea: document.querySelector("#subjectArea").value,
-        creditHours: document.querySelector("#creditHours").value,
-        courseDesc: document.querySelector("#description").value
+        subject: document.querySelector("#subjectArea").value,
+        credits: document.querySelector("#creditHours").value,
+        description: document.querySelector("#description").value,
+        instructor: document.querySelector("#instructor").value
     }
 
-    const response = await fetch("https://locrian-harsh-scion.glitch.me/api/courses", {
+    const response = await fetch("http://localhost:3000/api/courses", {
+    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/courses", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"

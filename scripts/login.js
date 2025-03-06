@@ -13,7 +13,8 @@ async function login(username, password){
         password
     }
     // send the login post request to the backend
-    const response = await fetch("https://locrian-harsh-scion.glitch.me/api/auth", {
+    const response = await fetch("http://localhost:3000/api/login", {
+    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/auth", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
@@ -28,6 +29,7 @@ async function login(username, password){
         uname = tokenResponse.username2
         auth = tokenResponse.auth
         role = tokenResponse.role2
+        userId = tokenResponse.userId2
         console.log(token)
 
             //save it
@@ -35,9 +37,10 @@ async function login(username, password){
         localStorage.setItem("uname", uname)
         localStorage.setItem("auth", auth)
         localStorage.setItem("role", role)
+        localStorage.setItem("userId", userId)
         //redirect
-        //window.location.replace("/index.html")
-        window.location.replace("/fp-frontend/index.html")
+        window.location.replace("/all_courses.html")
+        //window.location.replace("/fp-frontend/index.html")
     }
     else{
         document.querySelector("#errorMsg").innerHTML = "Bad username and password"

@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html">Courses For College</a></h1>
+        <h1>Courses For College</h1>
     </header>
     
     <div id="navbar">
@@ -20,21 +20,23 @@
                 <!---<li><a href="index.html">Home</a></li>
                 <li><a href="add_course.html">Add a Course</a></li>
                 <li><a href="courses.html">Your Courses</a></li>
-                <li><a href="delete.html">Delete a Course</a></li>
+                <li><a href="delete.html">Delete a Course</a></li> --->
                 <li><a href="login.html">Login</a></li>
                  <li><a href="registration.html">Register</a></li>
-                <li><button id="logout" style="float: right">Logout</button></li> --->
-                <li><a href="/fp-frontend/index.html">Home</a></li>
+                <li><button id="logout" style="float: right">Logout</button></li>
+                <!---<li><a href="/fp-frontend/index.html">Home</a></li>
                 <li><a href="/fp-frontend/add_course.html">Add a Course</a></li>
                 <li><a href="/fp-frontend/courses.html">Your Courses</a></li>
                 <li><a href="/fp-frontend/delete.html">Delete a Course</a></li>
                 <li><a href="/fp-frontend/login.html">Login</a></li>
                 <li><a href="/fp-frontend/registration.html">Register</a></li>
-                <li><button id="logout" style="float: right">Logout</button></li>
+                <li><button id="logout" style="float: right">Logout</button></li> --->
             </ul>
         </nav>
     </div>
-    <h1>Register as a New User</h1>
+    <div style="text-align: center;">
+        <h1>Register as a New User</h1>
+    </div>
     <form id="register" autocomplete="off">
         <div>
             <label for="username">Username:</label>
@@ -46,8 +48,8 @@
         </div>
         <div>
             <select id="roleDropdown">
-                <option value="Teacher">Professor</option>
-                <option value="Student">Student</option>
+                <option value="teacher">Professor</option>
+                <option value="student">Student</option>
             </select>
         </div>
         <button id="regBtn" type="button">Register</button>

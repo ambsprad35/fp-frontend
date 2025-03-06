@@ -7,7 +7,9 @@
         <title>Final Project :: About</title>
         <link rel="stylesheet" type="text/css" href="FinalCSS.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+        <script src="scripts/courses.js"></script>
+        <script defer src="scripts/studentauth.js"></script>
+        <script defer src="scripts/init.js"></script>
     </head>
 <body>
     <header>
@@ -17,24 +19,35 @@
     <div id="navbar">
         <nav>
             <ul>
-                <!---<li><a href="index.html">Home</a></li>
+                <li><a href="all_courses.html">View Courses</a></li>
                 <li><a href="add_course.html">Add a Course</a></li>
-                <li><a href="courses.html">Your Courses</a></li>
+                <li><a href="courses.html">Your Cart</a></li>
                 <li><a href="delete.html">Delete a Course</a></li>
-                <li><a href="login.html">Login</a></li>
-                 <li><a href="registration.html">Register</a></li>
-                <li><button id="logout" style="float: right">Logout</button></li> --->
-                <li><a href="/fp-frontend/index.html">Home</a></li>
+                <!---<li><a href="login.html">Login</a></li>
+                <li><a href="registration.html">Register</a></li> --->
+                <li><button id="logout" style="float: right">Logout</button></li>
+                <!---- <li><a href="/fp-frontend/index.html">Home</a></li>
                 <li><a href="/fp-frontend/add_course.html">Add a Course</a></li>
                 <li><a href="/fp-frontend/courses.html">Your Courses</a></li>
                 <li><a href="/fp-frontend/delete.html">Delete a Course</a></li>
                 <li><a href="/fp-frontend/login.html">Login</a></li>
                 <li><a href="/fp-frontend/registration.html">Register</a></li>
-                <li><button id="logout" style="float: right">Logout</button></li>
+                <li><button id="logout" style="float: right">Logout</button></li> --->
             </ul>
         </nav>
     </div>
-
-    <p>This is where the students courses will go when that works</p>
+    <div style="text-align: center;">
+        <h1>Add a Course to your Cart</h1>
+    </div>
+    
+    <form>
+        <select id="cartDropdown"></select>
+        <input type="button" value="Add to Cart" id="addCartBtn">
+        <div id="error"></div>
+    </form>
+    <div style="text-align: center;">
+        <h2>Your Added Courses</h2>
+    </div>
+    <div id="addedCourses"></div>
 </body>
 </html>

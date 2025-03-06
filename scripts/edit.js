@@ -3,15 +3,16 @@ addEventListener("DOMContentLoaded", async function(){
     const urlparam = new URLSearchParams(window.location.search)
     const courseId = urlparam.get('id')
 
-    //const response = await fetch("http://localhost:3000/api/courses/" + courseId)
-    const response = await fetch("https://locrian-harsh-scion.glitch.me/api/courses/" + courseId)
+    const response = await fetch("http://localhost:3000/api/courses/" + courseId)
+    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/courses/" + courseId)
     if(response.ok){
         let course =  await response.json()
         document.querySelector("#courseId").value = course._id
         document.querySelector("#name").value = course.name
-        document.querySelector("#subjectArea").value = course.subjectArea
-        document.querySelector("#creditHours").value = course.creditHours
-        document.querySelector("#description").value = course.courseDesc
+        document.querySelector("#subjectArea").value = course.subject
+        document.querySelector("#creditHours").value = course.credits
+        document.querySelector("#description").value = course.description
+        document.querySelector("#instructor").value = course.instructor
     }
 
 })
@@ -22,13 +23,14 @@ async function updateCourse(){
     const course = {
         _id: document.querySelector("#courseId").value,
         name: document.querySelector("#name").value,
-        subjectArea: document.querySelector("#subjectArea").value,
-        creditHours: document.querySelector("#creditHours").value,
-        courseDesc: document.querySelector("#description").value,
+        subject: document.querySelector("#subjectArea").value,
+        credits: document.querySelector("#creditHours").value,
+        description: document.querySelector("#description").value,
+        instructor: document.querySelector("#instructor").value,
     }
 
-    const response = await fetch("https://locrian-harsh-scion.glitch.me/api/courses/" + courseID,{
-    //const response = await fetch("http://localhost:3000/api/courses/" + courseID,{    
+    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/courses/" + courseID,{
+    const response = await fetch("http://localhost:3000/api/courses/" + courseID,{    
         method: "PUT",
         headers: {
             "Content-Type" : "application/json"
