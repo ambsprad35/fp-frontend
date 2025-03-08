@@ -10,7 +10,7 @@ async function addUser(){
         role: document.querySelector("#roleDropdown option:checked").value
     }
     const response = await fetch("http://localhost:3000/api/register",{        //("http://localhost:3000/api/user", {
-    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/user", {
+    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/register", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"

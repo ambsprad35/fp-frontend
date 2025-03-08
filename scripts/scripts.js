@@ -13,5 +13,16 @@ addEventListener("DOMContentLoaded", async function () {
     }
 
     document.querySelector("#list_of_courses").innerHTML = html
+    document.querySelector("#acLogoutBtn").addEventListener("click", acLogOut)
     
 })
+
+async function acLogOut(){
+    localStorage.removeItem("auth")
+    localStorage.removeItem("token")
+    localStorage.removeItem("uname")
+
+    window.location.replace("/index.html")
+    //window.location.replace("/fp-frontend/index.html")
+
+}

@@ -2,6 +2,7 @@ addEventListener("DOMContentLoaded", async function(){
     document.querySelector("#addCartBtn").addEventListener("click", addToCart)
     getAllCourses()
     getEnrolledCourses()
+    console.log(this.localStorage.getItem("role"))
 })
 
 async function getAllCourses(){
@@ -45,6 +46,7 @@ async function addToCart() {
     }
 
 }
+
 /*
 async function addToCart(){
     const userId = localStorage.userId

@@ -14,7 +14,7 @@ async function login(username, password){
     }
     // send the login post request to the backend
     const response = await fetch("http://localhost:3000/api/login", {
-    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/auth", {
+    //const response = await fetch("https://locrian-harsh-scion.glitch.me/api/login", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"

@@ -22,4 +22,13 @@ class StudentAuth{
             console.log(role)
         }
     }
+
+    logOut(){
+        localStorage.removeItem("auth")
+        localStorage.removeItem("token")
+        localStorage.removeItem("uname")
+
+        window.location.replace("/index.html")
+        //window.location.replace("/fp-frontend/login.html")
+    }
 }
